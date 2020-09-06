@@ -1,0 +1,28 @@
+.AppBar{
+    position: static;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;  
+    text-align: center;
+    background-color: #282c34;
+    background-size: auto;
+    min-height: 100vh;
+}
+
+.Search{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.123);  
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.SearchIcon{
+        /* margin-right: 10px;
+        margin-top: 20px; */
+}
+
