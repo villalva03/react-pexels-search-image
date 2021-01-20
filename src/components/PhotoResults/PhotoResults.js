@@ -4,11 +4,11 @@ import Fab from '@material-ui/core/Fab';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import axios from 'axios';
-import '../PhotoResults.css';
+import './PhotoResults.css';
   
 function PhotoResults({image, nextPage, ...props}) {
 
-    const [apiKey, setApiKey] = useState('GET AN API KEY AT https://pixabay.com/');
+    const [apiKey] = useState(process.env.REACT_APP_APIPEXELS);
     const [imagePage, setImagePage] = useState([]);
     const [next, setNext] = useState('');
     const [prevPage, setPrevPage] = useState('');

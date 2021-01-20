@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import SearchIcon from '@material-ui/icons/Search';
 import TextField from '@material-ui/core/TextField';
-import '../Search.css';
+import './Search.css';
 import Button from '@material-ui/core/Button';
-import PhotoResult from './PhotoResults';
+import PhotoResult from '../PhotoResults/PhotoResults';
 
 function Search() {
 
-    const [url, setUrl] = useState('https://api.pexels.com/v1');
-    const [apiKey, setApiKey] = useState('GET AN API KEY AT https://pexels.com/');
+    const [url] = useState('https://api.pexels.com/v1');
+    const [apiKey] = useState(process.env.REACT_APP_APIPEXELS);
     const [textSearch, setTextSearch] = useState('');
     const [resultSearch, setResultSearch] = useState([]);
     const [nextPage, setNextPage] = useState('');
@@ -52,11 +52,11 @@ function Search() {
                     onChange={onChangeText}
                 />
                 <Button
-                    variant="contained"
-                    color="secondary"
-                    size="large"
-                    startIcon={<SearchIcon className='SearchIcon' fontSize='large' />}
-                    onClick={onClickSearch}
+                variant="contained"
+                color="secondary"
+                size="large"
+                startIcon={<SearchIcon className='SearchIcon' fontSize='large' />}
+                onClick={onClickSearch}
                 >
                 Search
                 </Button>
